@@ -1,6 +1,3 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -25,22 +22,12 @@ var addCmd = &cobra.Command{
 	Use:   "add",
 	Short: "This command adds task to the To Do list",
 	Long: `You will use this command to add tast to the end of the To Do list, it will automatically marked uncomplete,
-	example usage tasks add <desctription>. It only takes one argument which is the desctription`,
+	example usage tasks add <description>. It only takes one argument which is the desctription`,
 	Run: add,
 }
 
 func init() {
 	rootCmd.AddCommand(addCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// addCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// addCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 func add(cmd *cobra.Command, args []string) {
